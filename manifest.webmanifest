@@ -1,0 +1,17 @@
+{
+  "name": "MintWeb OS",
+  "short_name": "MintWeb",
+  "description": "A free, AI-powered web desktop inspired by Linux Mint Cinnamon.",
+  "start_url": "./",
+  "scope": "./",
+  "display": "fullscreen",
+  "display_override": ["window-controls-overlay", "fullscreen", "standalone"],
+  "background_color": "#101010",
+  "theme_color": "#2b2b2b",
+  "categories": ["productivity", "utilities"],
+  "icons": [
+    { "src": "assets/icon.svg", "sizes": "any", "type": "image/svg+xml", "purpose": "any" },
+    { "src": "assets/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "assets/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}

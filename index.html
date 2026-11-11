@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>MintWeb OS</title>
+<meta name="description" content="A free, AI-powered web desktop inspired by Linux Mint Cinnamon. Runs in any modern browser on Windows, Linux and macOS.">
+<meta name="theme-color" content="#2b2b2b">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="icon" href="assets/icon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/icon-192.png">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div id="boot">
+  <div class="boot-logo"></div>
+  <div class="boot-name">MintWeb OS</div>
+  <div class="boot-dots"><span></span><span></span><span></span><span></span><span></span></div>
+</div>
+
+<main id="desktop" aria-label="Desktop">
+  <div id="desktop-icons"></div>
+  <div id="windows"></div>
+  <div id="toasts"></div>
+</main>
+
+<nav id="panel" aria-label="Panel">
+  <button id="menu-btn" class="panel-btn" title="Menu (Alt+F1)" aria-label="Menu"></button>
+  <div id="launchers"></div>
+  <div id="tasklist"></div>
+  <div id="tray">
+    <button id="tray-ai" class="panel-btn" title="Mint AI (Ctrl+Alt+A)" aria-label="Mint AI"></button>
+    <span id="tray-net" class="tray-item" title="Network"></span>
+    <span id="tray-vol" class="tray-item" title="Volume"></span>
+    <button id="clock" class="panel-btn" title="Calendar"></button>
+    <button id="show-desktop" title="Show desktop" aria-label="Show desktop"></button>
+  </div>
+</nav>
+
+<section id="menu" class="hidden" aria-label="Application menu">
+  <div class="menu-side">
+    <div id="menu-favs"></div>
+    <div class="menu-power">
+      <button data-power="lock" title="Lock screen"></button>
+      <button data-power="logout" title="Log out"></button>
+      <button data-power="shutdown" title="Quit"></button>
+    </div>
+  </div>
+  <div class="menu-main">
+    <div class="menu-search"><input id="menu-search" type="search" placeholder="Search apps, files or ask AI…" autocomplete="off"></div>
+    <div class="menu-cols">
+      <div id="menu-cats"></div>
+      <div id="menu-apps"></div>
+    </div>
+  </div>
+</section>
+
+<div id="calendar" class="popup hidden"></div>
+<div id="ctx" class="hidden" role="menu"></div>
+<div id="overlay" class="hidden"></div>
+
+<script src="js/icons.js"></script>
+<script src="js/util.js"></script>
+<script src="js/vfs.js"></script>
+<script src="js/ai.js"></script>
+<script src="js/wm.js"></script>
+<script src="js/os.js"></script>
+<script src="js/apps/files.js"></script>
+<script src="js/apps/terminal.js"></script>
+<script src="js/apps/editor.js"></script>
+<script src="js/apps/assistant.js"></script>
+<script src="js/apps/settings.js"></script>
+<script src="js/apps/browser.js"></script>
+<script src="js/apps/software.js"></script>
+<script src="js/apps/monitor.js"></script>
+<script src="js/apps/calculator.js"></script>
+<script src="js/apps/viewer.js"></script>
+<script src="js/apps/welcome.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
