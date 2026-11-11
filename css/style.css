@@ -119,7 +119,7 @@ label { font-size: 13px; color: var(--muted); }
 #clock { font-size: 13px; padding: 0 12px; white-space: nowrap; }
 #show-desktop { width: 8px; border: none; border-left: 1px solid color-mix(in srgb, var(--fg) 15%, transparent); background: transparent; cursor: pointer; }
 #show-desktop:hover { background: var(--hover); }
-@media (max-width: 640px) { .task-label { display: none; } .task { max-width: 48px; } #tray-vol { display: none; } }
+@media (max-width: 640px) { .task-label { display: none; } .task { flex: none; width: 44px; min-width: 44px; padding: 0; justify-content: center; } #tasklist { overflow-x: auto; scrollbar-width: none; } #launchers, #tray-vol, #tray-net { display: none; } #clock { padding: 0 8px; } }
 
 /* ---------- menu ---------- */
 #menu { position: fixed; left: 0; bottom: var(--panel-h); width: 640px; max-width: 100vw; height: 560px; max-height: calc(100vh - var(--panel-h)); background: var(--menu); backdrop-filter: blur(14px); box-shadow: var(--shadow); border: 1px solid var(--border); border-radius: 0 10px 0 0; display: flex; z-index: 9500; animation: menuIn .14s ease-out; }
@@ -236,7 +236,7 @@ label { font-size: 13px; color: var(--muted); }
 .ai-panel-head { display: flex; align-items: center; gap: 8px; padding: 6px 10px; font-weight: 600; font-size: 13px; }
 .ai-panel-body { overflow: auto; padding: 4px 12px 10px; font-size: 13.5px; line-height: 1.5; white-space: pre-wrap; }
 .dropdown { position: relative; }
-.dropdown-menu { position: absolute; top: calc(100% + 4px); left: 0; z-index: 20; min-width: 220px; padding: 5px; background: var(--menu); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); }
+.dropdown-menu { position: absolute; top: calc(100% + 4px); right: 0; max-width: calc(100vw - 16px); z-index: 20; min-width: 220px; padding: 5px; background: var(--menu); border: 1px solid var(--border); border-radius: 8px; box-shadow: var(--shadow); }
 
 /* ---------- apps: assistant ---------- */
 .chat { flex: 1; display: flex; flex-direction: column; min-height: 0; background: var(--bg); }
